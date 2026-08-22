@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mirae Agent Architecture & Whitepaper — Mirae Agent</title>
+  <link rel="icon" href="/mirae-logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #07080a;
+      --card-bg: rgba(14, 16, 22, 0.85);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --cyan: #06b6d4;
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Manrope', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); min-height: 100vh; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 0; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: #fff; text-decoration: none; }
+    .brand span { color: var(--cyan); }
+    main { padding: 3rem 0; }
+    h1 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a class="brand" href="/">MIR<span>Λ</span>E AGENT</a>
+      <a href="/" style="color: var(--cyan); text-decoration: none; font-family: var(--font-heading); font-weight: 600;">← Back to Home</a>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Mirae Agent Architecture & Whitepaper</h1>
+    
+  <div class="card">
+    <h2 style="font-size: 1.3rem; margin-bottom: 0.75rem;">1. Executive Summary</h2>
+    <p style="color: var(--text-muted); line-height: 1.6;">Mirae Agent is a locally run AI Agent workspace designed to automate on-chain executions across Robinhood Chain and Pons Family DEXes while preserving 100% wallet approval security.</p>
+  </div>
+  <div class="card">
+    <h2 style="font-size: 1.3rem; margin-bottom: 0.75rem;">2. Security & Local Execution</h2>
+    <p style="color: var(--text-muted); line-height: 1.6;">Unlike web-based dApps that require signing broad transaction permissions, Mirae Agent compiles transaction graphs locally on desktop. Signing in never approves a later transaction without explicit confirmation.</p>
+  </div>
+
+  </main>
+</body>
+</html>
