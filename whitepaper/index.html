@@ -1,53 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" data-theme="bright">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mirae Agent Architecture & Whitepaper — Mirae Agent</title>
+  <title>Whitepaper — Mirae Agent</title>
   <link rel="icon" href="/mirae-logo.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/2qs71x3bjxix0.css" />
+  <link rel="stylesheet" href="/css/2rbx5ny5hq6rt.css" />
+  <link rel="stylesheet" href="/css/04ps1jzwnbkj9.css" />
   <style>
     :root {
-      --bg: #07080a;
-      --card-bg: rgba(14, 16, 22, 0.85);
-      --border: rgba(255, 255, 255, 0.1);
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --cyan: #06b6d4;
-      --font-heading: 'Space Grotesk', sans-serif;
-      --font-body: 'Manrope', sans-serif;
+      --background: #ffffff;
+      --foreground: #09090b;
+      --primary: #09090b;
+      --line-soft: #f4f4f5;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg); color: var(--text); font-family: var(--font-body); min-height: 100vh; }
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
-    header { border-bottom: 1px solid var(--border); padding: 1.25rem 0; }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
-    .brand { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: #fff; text-decoration: none; }
-    .brand span { color: var(--cyan); }
-    main { padding: 3rem 0; }
-    h1 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1rem; }
-    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-top: 1.5rem; }
+    body { background: var(--background); color: var(--foreground); font-family: sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1; padding: 3rem 1.5rem; max-width: 1000px; margin: 0 auto; width: 100%; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav-inner">
-      <a class="brand" href="/">MIR<span>Λ</span>E AGENT</a>
-      <a href="/" style="color: var(--cyan); text-decoration: none; font-family: var(--font-heading); font-weight: 600;">← Back to Home</a>
-    </div>
-  </header>
-  <main class="container">
-    <h1>Mirae Agent Architecture & Whitepaper</h1>
+  <header class="publicNav">
+  <div class="publicNavInner">
+    <a class="brightWordmark" aria-label="Mirae Agent home" href="/">
+      <span aria-hidden="true">MIR</span><span aria-hidden="true">Λ</span><span aria-hidden="true">E AGENT</span>
+    </a>
+    <nav aria-label="Primary navigation" class="brightNavLinks">
+      <a class="font-display text-sm font-semibold text-black transition-colors hover:text-primary" href="/">Home</a>
+      <a class="font-display text-sm font-semibold text-black transition-colors hover:text-primary" href="/whitepaper">Whitepaper</a>
+      <a class="font-display text-sm font-semibold text-black transition-colors hover:text-primary" href="/releases">Changelog</a>
+      <div class="group relative">
+        <button type="button" class="font-display text-sm font-semibold text-black transition-colors hover:text-primary">Community</button>
+        <div class="invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+          <div class="flex min-w-[9rem] flex-col rounded-2xl border border-primary/25 bg-gradient-to-b from-background/95 to-primary/10 p-2 shadow-soft backdrop-blur-md">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-center font-display text-sm font-semibold text-black transition-colors hover:bg-primary/10 hover:text-primary">X</a>
+            <a aria-disabled="true" class="flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-center font-display text-sm font-semibold text-black transition-colors hover:bg-primary/10 hover:text-primary">Discord<span class="rounded-full bg-primary/10 px-2 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-primary/70">Soon</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="group relative">
+        <button type="button" class="font-display text-sm font-semibold text-black transition-colors hover:text-primary">Download</button>
+        <div class="invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+          <div class="flex min-w-[9rem] flex-col rounded-2xl border border-primary/25 bg-gradient-to-b from-background/95 to-primary/10 p-2 shadow-soft backdrop-blur-md">
+            <a href="/releases" class="flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-center font-display text-sm font-semibold text-black transition-colors hover:bg-primary/10 hover:text-primary">Windows</a>
+            <a href="/releases" class="flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-center font-display text-sm font-semibold text-black transition-colors hover:bg-primary/10 hover:text-primary">Linux</a>
+            <a aria-disabled="true" class="flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-center font-display text-sm font-semibold text-black transition-colors hover:bg-primary/10 hover:text-primary">macOS<span class="rounded-full bg-primary/10 px-2 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-primary/70">Soon</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <button type="button" class="brightMobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mirae-mobile-navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+    </button>
+  </div>
+</header>
+  <main>
     
-  <div class="card">
-    <h2 style="font-size: 1.3rem; margin-bottom: 0.75rem;">1. Executive Summary</h2>
-    <p style="color: var(--text-muted); line-height: 1.6;">Mirae Agent is a locally run AI Agent workspace designed to automate on-chain executions across Robinhood Chain and Pons Family DEXes while preserving 100% wallet approval security.</p>
-  </div>
-  <div class="card">
-    <h2 style="font-size: 1.3rem; margin-bottom: 0.75rem;">2. Security & Local Execution</h2>
-    <p style="color: var(--text-muted); line-height: 1.6;">Unlike web-based dApps that require signing broad transaction permissions, Mirae Agent compiles transaction graphs locally on desktop. Signing in never approves a later transaction without explicit confirmation.</p>
-  </div>
-
+      <h1 class="font-display text-3xl font-bold tracking-tight mb-4">Mirae Agent Whitepaper</h1>
+      <p class="text-muted-foreground text-base leading-relaxed mb-6">Locally Run On-Chain AI Agent Workspace Architecture and Security Specification for Robinhood Chain & Pons Family.</p>
+      <div class="rounded-2xl border border-border p-6 bg-card">
+        <h2 class="font-display text-xl font-semibold mb-2">1. Local Execution & Privacy</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed mb-4">Mirae Agent compiles all transaction graphs locally on desktop (Windows/Linux/macOS). Your wallet keeps control of every signature and signing in never approves a later transaction without explicit confirmation.</p>
+        <h2 class="font-display text-xl font-semibold mb-2">2. Robinhood Chain & Pons DLMM Integration</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed">Integrated directly with Pons Swap DLMM, Robinhood Chain liquidity pools, and automated yield sweepers for maximum execution performance.</p>
+      </div>
+    
   </main>
 </body>
 </html>
